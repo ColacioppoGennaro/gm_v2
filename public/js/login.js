@@ -9,6 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const loginError = document.getElementById('loginError');
     const registerError = document.getElementById('registerError');
 
+    // API path: deploy under /gm_v2 on hosting
+    const API_PATH = '/gm_v2/api/auth.php';
+
     showRegister.onclick = () => { loginBox.style.display = 'none'; registerBox.style.display = 'block'; };
     showLogin.onclick = () => { loginBox.style.display = 'block'; registerBox.style.display = 'none'; };
 
@@ -16,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         loginError.textContent = '';
         try {
-            const res = await fetch('/api/auth.php', {
+            const res = await fetch(API_PATH, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
@@ -40,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
         e.preventDefault();
         registerError.textContent = '';
         try {
-            const res = await fetch('/api/auth.php', {
+            const res = await fetch(API_PATH, {
                 method: 'POST',
                 headers: {'Content-Type': 'application/json'},
                 body: JSON.stringify({
