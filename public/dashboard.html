@@ -2,39 +2,47 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Dashboard - GM v2</title>
   <link rel="stylesheet" href="css/style.css">
-  <style>
-    /* stile minimo per debug */
-    body { font-family: Arial, sans-serif; margin: 20px; }
-    header { display:flex; justify-content:space-between; align-items:center; }
-    #main { margin-top:20px; }
-    .hidden { display:none; }
-  </style>
 </head>
 <body>
-  <header>
-    <h1>Dashboard GM v2</h1>
-    <div>
-      <span id="welcomeText">Benvenuto</span>
-      <button id="logoutBtn">Logout</button>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h1>Dashboard GM v2</h1>
+      <div class="user-info">
+        <span id="welcomeText" class="welcome">Benvenuto</span>
+        <button id="logoutBtn" class="btn">Logout</button>
+      </div>
     </div>
-  </header>
 
-  <div id="main">
-    <section id="menu">
-      <h2>Menu</h2>
-      <ul>
-        <li><a href="upload.html">Carica documento</a></li>
-        <li><a href="documents.html">I miei documenti</a></li>
-        <li><a href="chat.html">Chat</a></li>
-      </ul>
+    <section>
+      <h2>I miei documenti</h2>
+      <div id="documents-list">
+        <div class="document-item">
+          <div>
+            <strong>Documento di esempio.pdf</strong>
+            <small> — caricamento 1 giorno fa</small>
+          </div>
+          <div>
+            <button class="btn">Apri</button>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="content">
-      <h2>Area principale</h2>
-      <p>Qui compariranno i contenuti della tua dashboard.</p>
+    <section class="chat-section">
+      <h2>Chat</h2>
+      <div class="chat-box">
+        <div id="chat-response-container" class="chat-placeholder">Nessuna conversazione ancora.</div>
+        <div class="chat-input-area">
+          <input id="chat-prompt" placeholder="Scrivi la tua domanda...">
+          <button id="chat-submit" class="btn">Invia</button>
+        </div>
+      </div>
     </section>
+
+    <div id="upload-status" class="hidden"></div>
   </div>
 
   <script src="js/app.js"></script>

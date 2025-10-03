@@ -1,12 +1,10 @@
-// Dashboard: mostra info base e gestisce logout
+// Aggiornamento benvenuto e gestione logout (non altera layout)
 document.addEventListener('DOMContentLoaded', function() {
   const welcomeText = document.getElementById('welcomeText');
   const logoutBtn = document.getElementById('logoutBtn');
 
-  // Mostra messaggio di benvenuto generico
   if (welcomeText) welcomeText.textContent = 'Benvenuto in GM v2';
 
-  // Logout: chiamo l'API che hai già (usiamo percorso assoluto relativo al deploy)
   if (logoutBtn) {
     logoutBtn.addEventListener('click', async function() {
       try {
