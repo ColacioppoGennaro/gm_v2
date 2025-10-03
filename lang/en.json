@@ -1,0 +1,9 @@
+{
+  "login": "Login",
+  "logout": "Logout",
+  "upload": "Upload document",
+  "calendar": "Calendar",
+  "chat": "AI Chat",
+  "profile": "Profile",
+  "settings": "Settings"
+}
