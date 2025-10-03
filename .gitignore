@@ -1,0 +1,17 @@
+
+# Dependencies / vendors
+/vendor/
+
+# Env & config (keep secrets out of repo)
+/config/*.local.php
+.env
+.env.*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.log
+.idea/
+.vscode/
+node_modules/
+dist/
