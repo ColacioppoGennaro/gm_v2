@@ -6,9 +6,27 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="login-form">
-        <!-- Form login viene gestito via JS -->
+    <div class="login-container">
+        <h2>Accedi</h2>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <button type="submit">Accedi</button>
+        </form>
+        <button id="showRegister">Registrati</button>
+        <div id="loginError" class="error"></div>
     </div>
-    <script src="js/app.js"></script>
+    <div class="login-container" id="registerBox" style="display:none;">
+        <h2>Registrati</h2>
+        <form id="registerForm">
+            <input type="email" id="regEmail" placeholder="Email" required><br>
+            <input type="password" id="regPassword" placeholder="Password" required><br>
+            <input type="text" id="regNickname" placeholder="Nickname o Società (opzionale)"><br>
+            <button type="submit">Crea account</button>
+        </form>
+        <button id="showLogin">Torna al login</button>
+        <div id="registerError" class="error"></div>
+    </div>
+    <script src="js/login.js"></script>
 </body>
 </html>
