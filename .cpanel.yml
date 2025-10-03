@@ -1,0 +1,6 @@
+deployment:
+  environment:
+    DEPLOYPATH: "/home/ywrloefq/public_html/gm_v2"
+  tasks:
+    - export DEPLOYPATH="$DEPLOYPATH"
+    - cp -R * "$DEPLOYPATH"
