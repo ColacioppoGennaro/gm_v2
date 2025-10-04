@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Carica documento - GM v2</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <div class="dashboard-header">
+      <h1>Carica documento</h1>
+      <div class="user-info">
+        <a href="dashboard.html" class="btn">Torna</a>
+      </div>
+    </div>
+
+    <section>
+      <p>Seleziona un file. Sono accettati solo i tipi consentiti e la dimensione massima è controllata.</p>
+
+      <form id="uploadForm" enctype="multipart/form-data">
+        <input id="fileInput" type="file" name="file" accept=".pdf,.doc,.docx,.txt,image/png,image/jpeg" />
+        <div style="margin-top:12px;">
+          <label for="category">Categoria (solo utenti PRO):</label>
+          <input id="category" name="category" placeholder="nome categoria (PRO only)" />
+        </div>
+
+        <div style="margin-top:12px;">
+          <button id="uploadBtn" type="submit" class="btn">Carica</button>
+        </div>
+      </form>
+
+      <div id="upload-status" class="hidden" aria-live="polite"></div>
+    </section>
+  </div>
+
+  <script src="js/upload.js"></script>
+</body>
+</html>
