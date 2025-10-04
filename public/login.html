@@ -11,21 +11,35 @@
     <div class="form-container" role="main">
       <h1>Accedi a GM v2</h1>
 
-      <form id="loginForm" aria-label="Form di login">
-        <input type="email" id="email" name="email" placeholder="Email" required>
-        <input type="password" id="password" name="password" placeholder="Password" required>
-        <button type="submit" class="btn-full">Accedi</button>
-      </form>
+      <!-- Toggle link -->
+      <div style="text-align:center; margin-bottom:12px;">
+        <button id="showLogin" class="btn btn-outline" type="button">Login</button>
+        <button id="showRegister" class="btn btn-outline" type="button">Registrati</button>
+      </div>
 
-      <h2>Registrati</h2>
-      <form id="registerForm" aria-label="Form registrazione">
-        <input type="email" id="regEmail" name="regEmail" placeholder="Email" required>
-        <input type="password" id="regPassword" name="regPassword" placeholder="Password" required>
-        <input type="text" id="regNickname" name="regNickname" placeholder="Nickname (opzionale)">
-        <button type="submit" class="btn-full">Crea account</button>
-      </form>
+      <!-- Login box -->
+      <div class="login-container">
+        <form id="loginForm" aria-label="Form di login">
+          <div id="loginError" class="message-error" style="display:none;"></div>
+          <input type="email" id="email" name="email" placeholder="Email" required>
+          <input type="password" id="password" name="password" placeholder="Password" required>
+          <button type="submit" class="btn-full">Accedi</button>
+        </form>
+      </div>
 
-      <div id="message-area" class="hidden"></div>
+      <!-- Register box (hidden by default) -->
+      <div id="registerBox" style="display:none;">
+        <h2>Registrati</h2>
+        <form id="registerForm" aria-label="Form registrazione">
+          <div id="registerError" class="message-error" style="display:none;"></div>
+          <input type="email" id="regEmail" name="regEmail" placeholder="Email" required>
+          <input type="password" id="regPassword" name="regPassword" placeholder="Password" required>
+          <input type="text" id="regNickname" name="regNickname" placeholder="Nickname (opzionale)">
+          <button type="submit" class="btn-full">Crea account</button>
+        </form>
+      </div>
+
+      <div id="message-area" class="hidden" aria-live="polite"></div>
     </div>
   </div>
 
